@@ -26,6 +26,6 @@ export default {
 }
 </script>
 
-<style scoped>
-/* ここにCSSを貼り付け */
+<style lang="scss">
+    @import '@/assets/css/style/components/Menu.scss';
 </style>
