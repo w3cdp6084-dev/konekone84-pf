@@ -1,0 +1,189 @@
+.button-menu {
+	position: relative;
+	width: 12.2666666667vw;
+	align-self: stretch;
+	cursor: pointer;
+	-webkit-transition: color .4s cubic-bezier(.26, .16, .1, 1);
+	transition: color .4s cubic-bezier(.26, .16, .1, 1);
+    background-color: #222;
+    color: #fff;
+    border-radius: 100%;
+    padding: 20px;
+}
+@media(min-width:768px) {
+	.button-menu {
+		width: 2.875rem;
+		margin-left: 2rem
+	}
+}
+@media(hover:hover)and (pointer:fine) {
+	.button-menu:hover .button-menu__dot:first-child {
+		-webkit-transform: translateX(.375rem);
+		transform: translateX(.375rem)
+	}
+	.button-menu:hover .button-menu__dot:not(:first-child, :last-child) {
+		-webkit-transform: scale(2.5);
+		transform: scale(2.5)
+	}
+	.button-menu:hover .button-menu__dot:last-child {
+		-webkit-transform: translateX(-.375rem);
+		transform: translateX(-.375rem)
+	}
+}
+.button-menu__icons {
+	display: grid;
+	width: 3.7333333333vw;
+	height: 3.7333333333vw;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden
+}
+@media(min-width:768px) {
+	.button-menu__icons {
+		width: .875rem;
+		height: .875rem
+	}
+}
+.button-menu__icons>* {
+	grid-column: 1/-1;
+	grid-row: 1/-1;
+	width: 100%;
+	height: 100%
+}
+.button-menu__dots {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-transition: opacity .4s cubic-bezier(.26, .16, .1, 1) .4s, -webkit-transform .4s cubic-bezier(.43, .05, .17, 1) .4s;
+	transition: opacity .4s cubic-bezier(.26, .16, .1, 1) .4s, -webkit-transform .4s cubic-bezier(.43, .05, .17, 1) .4s;
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1) .4s, opacity .4s cubic-bezier(.26, .16, .1, 1) .4s;
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1) .4s, opacity .4s cubic-bezier(.26, .16, .1, 1) .4s, -webkit-transform .4s cubic-bezier(.43, .05, .17, 1) .4s
+}
+.button-menu__dot {
+	display: block;
+	width: .5333333333vw;
+	height: .5333333333vw;
+	border-radius: 50%;
+	background-color: currentColor;
+	-webkit-transition: -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1), -webkit-transform .4s cubic-bezier(.43, .05, .17, 1)
+}
+@media(min-width:768px) {
+	.button-menu__dot {
+		width: .125rem;
+		height: .125rem
+	}
+}
+.button-menu__bars {
+	display: grid
+}
+.button-menu__bar {
+	grid-column: 1/-1;
+	grid-row: 1/-1;
+	-webkit-transition: -webkit-transform .4s cubic-bezier(.43, .05, .17, 1) .4s;
+	transition: -webkit-transform .4s cubic-bezier(.43, .05, .17, 1) .4s;
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1) .4s;
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1) .4s, -webkit-transform .4s cubic-bezier(.43, .05, .17, 1) .4s;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%)
+}
+.button-menu__bar-inner {
+	display: block;
+	width: .5333333333vw;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: .2666666667vw;
+	background-color: currentColor;
+	-webkit-transition: -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1), -webkit-transform .4s cubic-bezier(.43, .05, .17, 1)
+}
+@media(min-width:768px) {
+	.button-menu__bar-inner {
+		width: .125rem
+	}
+}
+.global-header__menu-trigger__label-wrapper {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin-top: 1.3333333333vw
+}
+@media(min-width:768px) {
+	.global-header__menu-trigger__label-wrapper {
+		margin-top: .3125rem
+	}
+}
+.global-header__menu-trigger__label {
+	display: block;
+	text-align: center;
+	-webkit-transition: opacity .4s cubic-bezier(.26, .16, .1, 1), -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: opacity .4s cubic-bezier(.26, .16, .1, 1), -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1), opacity .4s cubic-bezier(.26, .16, .1, 1);
+	transition: transform .4s cubic-bezier(.43, .05, .17, 1), opacity .4s cubic-bezier(.26, .16, .1, 1), -webkit-transform .4s cubic-bezier(.43, .05, .17, 1);
+	color: currentColor
+}
+.global-header__menu-trigger__label:last-child {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%)
+}
+.button-menu[aria-pressed=true] .button-menu__dots {
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s
+}
+.button-menu[aria-pressed=true] .button-menu__dot:first-child {
+	-webkit-transform: translateX(.375rem);
+	transform: translateX(.375rem)
+}
+.button-menu[aria-pressed=true] .button-menu__dot:not(:first-child, :last-child) {
+	-webkit-transform: scale(2.5);
+	transform: scale(2.5)
+}
+.button-menu[aria-pressed=true] .button-menu__dot:last-child {
+	-webkit-transform: translateX(-.375rem);
+	transform: translateX(-.375rem)
+}
+.button-menu[aria-pressed=true] .button-menu__bar {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s
+}
+.button-menu[aria-pressed=true] .button-menu__bar-inner {
+	-webkit-transition-delay: .4s;
+	transition-delay: .4s
+}
+.button-menu[aria-pressed=true] .button-menu__bar:first-child .button-menu__bar-inner {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+.button-menu[aria-pressed=true] .button-menu__bar:last-child .button-menu__bar-inner {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+.button-menu[aria-pressed=true] .global-header__menu-trigger__label:first-child {
+	opacity: 0;
+	-webkit-transform: translateY(50%);
+	transform: translateY(50%)
+}
+.button-menu[aria-pressed=true] .global-header__menu-trigger__label:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0)
+}
